@@ -1,0 +1,9 @@
+collect = { file ->
+    Properties properties = new Properties()
+    try {
+        file.withReader { properties.load(it) }
+    } catch (FileNotFoundException ignore) {
+        // return empty properties object when file is not found
+    }
+    return properties
+}

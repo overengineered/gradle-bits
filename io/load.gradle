@@ -1,4 +1,4 @@
-File.metaClass.load = {
+load = {
     Properties properties = new Properties()
     delegate.withReader { properties.load(it) }
     return properties
